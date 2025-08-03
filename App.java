@@ -9,9 +9,10 @@
 
 public class App {
     public static void main(String[] args) {
+        //Se crean los 2 entrenadores que van a jugar
         Entrenador ash = new Entrenador("Ash");
         Entrenador misty = new Entrenador("Misty");
-
+// Cada entenador tendra 4 pokemones
         ash.agregarPokemon(new Pokemon("Charmander", Tipo.FUEGO, 50, 30,
             new HabilidadEspecial("Llama Final", "ATAQUE", 15, 0.3)));
         ash.agregarPokemon(new Pokemon("Bulbasaur", Tipo.PLANTA, 45, 35,
@@ -29,7 +30,7 @@ public class App {
             new HabilidadEspecial("Fuego Fatuo", "ATAQUE", 17, 0.35)));
         misty.agregarPokemon(new Pokemon("Magnemite", Tipo.ELECTRICO, 70, 33,
             new HabilidadEspecial("Electroshock", "DANO", -8, 0.25)));
-
+// se Mandan los entrenadores a la clase combate
         Combate combate = new Combate(ash, misty);
         combate.iniciar();
     }

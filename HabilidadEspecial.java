@@ -10,7 +10,7 @@ public class HabilidadEspecial {
         this.valor = valor;
         this.probabilidad = probabilidad;
     }
-
+// random para determinar si se usara la habilidad especial
     public boolean seActiva() {
         return Math.random() <= probabilidad;
     }

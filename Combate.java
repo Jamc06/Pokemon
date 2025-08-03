@@ -3,6 +3,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Combate {
+    //La clase combate se uso como un tipo de controlador para todo el apartado
     private Entrenador e1;
     private Entrenador e2;
     private int rondasGanadas1 = 0;
@@ -16,7 +17,7 @@ public class Combate {
     public void iniciar() {
         Scanner scanner = new Scanner(System.in);
     ArrayList<Pokemon> disponibles1 = new ArrayList<>(e1.getEquipo());
-    ArrayList<Pokemon> disponibles2 = new ArrayList<>(e2.getEquipo());
+    ArrayList<Pokemon> disponibles2 = new ArrayList<>(e2.getEquipo());//se inicia el combate con el array con los pokemons
     Random rand = new Random();
 
     for (int ronda = 1; ronda <= 4; ronda++) {
@@ -61,7 +62,7 @@ public class Combate {
     mostrarGanador();
 }
         
-
+// se realizan las relaciones entre los elementos con un enum
     public static int calcularEfectoTipo(Tipo atacante, Tipo defensor) {
         if ((atacante == Tipo.FUEGO && defensor == Tipo.PLANTA) ||
             (atacante == Tipo.PLANTA && defensor == Tipo.AGUA) ||
